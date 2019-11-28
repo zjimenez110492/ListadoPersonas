@@ -18,10 +18,7 @@ export class AppComponent implements OnInit{
     
   }
   
-  onPersonaAgregada(persona:Persona)
-  {
-    this.personasService.agregarPersona(persona);
-  }
+  
 
 
 

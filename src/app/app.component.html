@@ -10,8 +10,10 @@
   (personaCreada), esta variable cuando se dispara, va a llamar a el evento onPersonaAgregada
 y va a pasar el evento, que en realidad es una persona, como parametro-->
   <app-formulario
-  (personaCreada)="onPersonaAgregada($event)" ></app-formulario>
+  ></app-formulario>
   <hr/>
+  <!---el arreglo personas que se está recorriendo está en esta clase pero en el ts, es decir en app.componente.ts
+  [persona] si esta en la clase de persona.component.ts, de igual manera lo está el indice-->
   <app-persona *ngFor="let personaElemento of personas; let i =index"
                 [persona]="personaElemento"
                 [indice]="i" 
