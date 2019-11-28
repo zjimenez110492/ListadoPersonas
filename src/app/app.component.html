@@ -2,10 +2,13 @@
 <div class="container">
   <div class="col-xs-12">
     <h3>
-      {{titulo}}
+     ****  {{titulo}}  ****
     </h3>    
   </div>
   <hr/>
+  <!--aqui se esta monitoreando la variable de tipo salida, que esta en formilario
+  (personaCreada), esta variable cuando se dispara, va a llamar a el evento onPersonaAgregada
+y va a pasar el evento, que en realidad es una persona, como parametro-->
   <app-formulario
   (personaCreada)="onPersonaAgregada($event)" ></app-formulario>
   <hr/>
