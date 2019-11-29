@@ -8,11 +8,14 @@ import { PersonasService } from './PersonasService.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  
+  titulo = 'LISTADO DE PERSONAS';
+  personas:Persona[];
+  
   ngOnInit(): void {
     this.personas=this.personasService.personas;
   }
-  titulo = 'listado de Personas';
-  personas:Persona[];
+  
   constructor(private personasService: PersonasService)
   {
     

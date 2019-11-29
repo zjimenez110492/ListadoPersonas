@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<div class="container">
-  <div class="col-xs-12">
-    <h3>
-     ****  {{titulo}}  ****
-    </h3>    
-  </div>
-  <hr/>
+<div class="box" id="heading">
+  
+    <h1>{{titulo}}</h1>    
+</div>  
   <!--aqui se esta monitoreando la variable de tipo salida, que esta en formilario
   (personaCreada), esta variable cuando se dispara, va a llamar a el evento onPersonaAgregada
 y va a pasar el evento, que en realidad es una persona, como parametro-->
-  <app-formulario
-  ></app-formulario>
-  <hr/>
-  <!---el arreglo personas que se está recorriendo está en esta clase pero en el ts, es decir en app.componente.ts
-  [persona] si esta en la clase de persona.component.ts, de igual manera lo está el indice-->
-  <app-persona *ngFor="let personaElemento of personas; let i =index"
+  <div class="box"> 
+    <app-persona *ngFor="let personaElemento of personas; let i =index"
                 [persona]="personaElemento"
                 [indice]="i" 
   ></app-persona>
 </div>
+<div class="box">  
+  <app-formulario>
+
+  </app-formulario>
+</div>
+  <!---el arreglo personas que se está recorriendo está en app.componente.ts
+  [persona] si esta en la clase de persona.component.ts, de igual manera lo está el indice-->
